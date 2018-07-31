@@ -1,8 +1,8 @@
 <?php
 
-return array(
+return [
 
-    'routes' => array(
+    'routes' => [
 
         'user/login' => [
             'user/login',
@@ -21,5 +21,5 @@ return array(
             'task=page&action=login',
             'namespace' => 'Users',
         ]
-    )
-);
+    ]
+];

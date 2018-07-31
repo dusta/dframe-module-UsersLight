@@ -5,7 +5,6 @@ use Dframe\Modules\ManagerModule;
 
 class Module extends ManagerModule
 {
-
     public function boot()
     {
         // $this->loadModels(array(__DIR__ . DIRECTORY_SEPARATOR . 'Model' . DIRECTORY_SEPARATOR));
@@ -16,7 +15,5 @@ class Module extends ManagerModule
 
     public function register()
     {
-
     }
-
 }

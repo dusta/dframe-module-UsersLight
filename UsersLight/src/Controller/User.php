@@ -2,7 +2,6 @@
 namespace Users\Controller;
 
 use Dframe\Config;
-use Dframe\Router\Response;
 
 /**
  * @author Sławomir Kaleta <slaszka@gmail.com>
@@ -10,12 +9,9 @@ use Dframe\Router\Response;
 
 class User extends \Controller\Controller
 {
-
     public function login()
     {
-
         if (isset($_POST) and !empty($_POST)) {
-
             if (!$this->baseClass->token->isValid('loginToken', (isset($_POST['token']) ? $_POST['token'] : null), true)) {
                 return $this->baseClass->msg->add('e', 'Formularz wygasł.', 'page/login');
             }
@@ -32,7 +28,6 @@ class User extends \Controller\Controller
             }
 
             return $this->baseClass->msg->add('e', 'Not Found', 'page/login');
-
         }
 
         return $this->router->redirect('page/login');
@@ -46,5 +41,4 @@ class User extends \Controller\Controller
         setcookie("currentPage", "", time() - 3600, "/");
         return $this->router->redirect('page/login');
     }
-
 }

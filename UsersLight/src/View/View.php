@@ -1,10 +1,8 @@
 <?php
 namespace Users\View;
 
-
 abstract class View extends \View\View
 {
-
     public function start()
     {
         parent::start();
@@ -13,8 +11,5 @@ abstract class View extends \View\View
         $this->view->smarty->setTemplateDir(__DIR__);
 
         $this->assign('router', $this->router);
-
     }
-
-
 }

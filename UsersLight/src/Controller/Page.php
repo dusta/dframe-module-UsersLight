@@ -1,9 +1,6 @@
 <?php
 namespace Users\Controller;
 
-use Dframe\FileStorage\Storage;
-use Dframe\Router\Response;
-
 /**
  * @author Sławomir Kaleta <slaszka@gmail.com>
  */
@@ -13,7 +10,6 @@ class Page extends \Controller\Controller
     /* Metoda wyświetlajaca okno logowania */
     public function login()
     {
-
         $user = new \Users\Entity\User($this->baseClass->session->get('id', 0));
         if ($user->isLogged() != true) {  // Sprawdzany czy użytkownik jest zalogowany
             $view = $this->loadView('Index');
@@ -25,5 +21,4 @@ class Page extends \Controller\Controller
 
         return $this->router->redirect('');
     }
-
 }

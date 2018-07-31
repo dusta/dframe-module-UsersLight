@@ -7,7 +7,6 @@ namespace Users\Entity;
 
 class User
 {
-
     protected $id;
     protected $username;
     protected $email;
@@ -15,7 +14,7 @@ class User
     protected $lastname;
     protected $lastActive;
     private $isLogged = false;
-    protected $urls = array();
+    protected $urls = [];
 
     public function __construct($id = null)
     {
